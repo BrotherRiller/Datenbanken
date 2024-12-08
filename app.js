@@ -4,6 +4,10 @@ const app = express();
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Ride-sharing App!');
+});
+
 // API Endpoint: Fetch All Rides
 app.get('/rides', async (req, res) => {
   try {
